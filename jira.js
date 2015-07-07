@@ -29,9 +29,9 @@ function addCommentToIssue(issue, data) {
 
 function getCommentMessage(data) {
 	if (data.branch == 'stage') {
-		return format("Code has been pushed to stage by {{commit.author.name}}{quote}{{commit.message}}{quote}", data);
+		return format("Code has been pushed to *stage* by {{commit.author.name}}{quote}{{commit.message}}{quote}", data);
 	} else if (data.branch == 'master') {
-		return format("Code has been pushed to master by {{commit.author.name}}. It will go live anytime soon.{quote}{{commit.message}}{quote}", data);
+		return format("Code has been pushed to *master* by {{commit.author.name}}. It will go live anytime soon.{quote}{{commit.message}}{quote}", data);
 	}
 	return data.commit.message;
 }

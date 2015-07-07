@@ -84,6 +84,10 @@ function storeToken(token) {
 
 function updateCommentInReleaseNotes(auth, data, fileId) {
 	var service = google.drive('v2');
+	// archive the release notes only if they are comming from master
+	if (data.branch != 'master') {
+		continue;
+	}
 	fs.appendFile(CACHE_PATH, getMessage(data), function(err) {
 		if (err) {
 			console.log('Unable to write to cache');
