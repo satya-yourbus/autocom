@@ -1,0 +1,18 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+#passwords
+zsconfig.js
+client_secret.json
+.credentials/
+
+#HTACCESS
+.htaccess
+
+#node
+node_modules/

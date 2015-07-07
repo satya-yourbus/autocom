@@ -1,0 +1,70 @@
+{
+	"sha": "aedc9821c6d1f31f0f26c6b7681280b2249b794a",
+	"commit": {
+		"author": {
+			"name": "Jiten Thakkar",
+			"email": "jiten@zapstitch.com",
+			"date": "2015-07-07T06:07:25Z"
+		},
+		"committer": {
+			"name": "Jiten Thakkar",
+			"email": "jiten@zapstitch.com",
+			"date": "2015-07-07T06:07:25Z"
+		},
+		"message": "Fetching all the entities while the sync is going on",
+		"tree": {
+			"sha": "8a5c64643c5fb47bd62ff4ce31b2e24e8be9c2cc",
+			"url": "https://api.github.com/repos/satya-yourbus/zapstitch-platform/git/trees/8a5c64643c5fb47bd62ff4ce31b2e24e8be9c2cc"
+		},
+		"url": "https://api.github.com/repos/satya-yourbus/zapstitch-platform/git/commits/aedc9821c6d1f31f0f26c6b7681280b2249b794a",
+		"comment_count": 0
+	},
+	"url": "https://api.github.com/repos/satya-yourbus/zapstitch-platform/commits/aedc9821c6d1f31f0f26c6b7681280b2249b794a",
+	"html_url": "https://github.com/satya-yourbus/zapstitch-platform/commit/aedc9821c6d1f31f0f26c6b7681280b2249b794a",
+	"comments_url": "https://api.github.com/repos/satya-yourbus/zapstitch-platform/commits/aedc9821c6d1f31f0f26c6b7681280b2249b794a/comments",
+	"author": {
+		"login": "jiten-thakkar",
+		"id": 636348,
+		"avatar_url": "https://avatars.githubusercontent.com/u/636348?v=3",
+		"gravatar_id": "",
+		"url": "https://api.github.com/users/jiten-thakkar",
+		"html_url": "https://github.com/jiten-thakkar",
+		"followers_url": "https://api.github.com/users/jiten-thakkar/followers",
+		"following_url": "https://api.github.com/users/jiten-thakkar/following{/other_user}",
+		"gists_url": "https://api.github.com/users/jiten-thakkar/gists{/gist_id}",
+		"starred_url": "https://api.github.com/users/jiten-thakkar/starred{/owner}{/repo}",
+		"subscriptions_url": "https://api.github.com/users/jiten-thakkar/subscriptions",
+		"organizations_url": "https://api.github.com/users/jiten-thakkar/orgs",
+		"repos_url": "https://api.github.com/users/jiten-thakkar/repos",
+		"events_url": "https://api.github.com/users/jiten-thakkar/events{/privacy}",
+		"received_events_url": "https://api.github.com/users/jiten-thakkar/received_events",
+		"type": "User",
+		"site_admin": false
+	},
+	"committer": {
+		"login": "jiten-thakkar",
+		"id": 636348,
+		"avatar_url": "https://avatars.githubusercontent.com/u/636348?v=3",
+		"gravatar_id": "",
+		"url": "https://api.github.com/users/jiten-thakkar",
+		"html_url": "https://github.com/jiten-thakkar",
+		"followers_url": "https://api.github.com/users/jiten-thakkar/followers",
+		"following_url": "https://api.github.com/users/jiten-thakkar/following{/other_user}",
+		"gists_url": "https://api.github.com/users/jiten-thakkar/gists{/gist_id}",
+		"starred_url": "https://api.github.com/users/jiten-thakkar/starred{/owner}{/repo}",
+		"subscriptions_url": "https://api.github.com/users/jiten-thakkar/subscriptions",
+		"organizations_url": "https://api.github.com/users/jiten-thakkar/orgs",
+		"repos_url": "https://api.github.com/users/jiten-thakkar/repos",
+		"events_url": "https://api.github.com/users/jiten-thakkar/events{/privacy}",
+		"received_events_url": "https://api.github.com/users/jiten-thakkar/received_events",
+		"type": "User",
+		"site_admin": false
+	},
+	"parents": [{
+		"sha": "5998999ac84d4f773ddef9a309729697dbb0c8aa",
+		"url": "https://api.github.com/repos/satya-yourbus/zapstitch-platform/commits/5998999ac84d4f773ddef9a309729697dbb0c8aa",
+		"html_url": "https://github.com/satya-yourbus/zapstitch-platform/commit/5998999ac84d4f773ddef9a309729697dbb0c8aa"
+	}],
+	"branch": "stage",
+	"_id": "ZtT7TKlAgPPUOqSk"
+}
