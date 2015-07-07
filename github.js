@@ -43,7 +43,7 @@ Commit.prototype.init = function() {
 	// for every commit that we received check if there is a record in local db and if not;
 	// emit appropriate events based on new commits to stage or master branch.
 	new CronJob({
-		cronTime: '*/1 * * * *',
+		cronTime: '*/5 * * * *',
 		onTick: function() {
 			_instance.checkCommits('stage');
 			_instance.checkCommits('master');
@@ -76,10 +76,12 @@ Commit.prototype.checkCommits = function(branch) {
 		password: config.github.password
 	});
 	// TODO add pagination
+	// TODO save last time invoked
 	github.repos.getCommits({
 		user: config.github.repo.user,
 		repo: config.github.repo.name,
-		sha: branch
+		sha: branch,
+		since: '2015-07-08T11:00:00+05:30'
 	}, function(err, res) {
 		if (err) {
 			console.log(err);

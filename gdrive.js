@@ -1,6 +1,8 @@
 var fs = require('fs');
 var readline = require('readline');
+var format = require('tinytim').tim
 var google = require('googleapis');
+var config = require('./zsconfig');
 var googleAuth = require('google-auth-library');
 var prependFile = require('prepend-file');
 var request = require('request');
@@ -171,7 +173,20 @@ gdrive.prototype.init = function(emitter) {
 	})
 };
 
+function getIssuesFromCommit(data) {
+	var cards = data.match(config.jira.issue.regex);
+	if (cards) {
+		return cards.join(', ').replace(/[Zz][Ss]-/g, 'https://' + config.jira.url + '/browse/ZS-');
+	}
+}
+
 function getMessage(data) {
-	return data.commit.message + '\n';
+	return "\n------------------ Commit Notes --------------------------------\n\n" +
+		format("Author: {{commit.author.name}}\n", data) +
+		format("Date: {{commit.author.date}}\n", data) +
+		"Jira Cards: " + getIssuesFromCommit(data.commit.message) +
+		"\nCommit Notes:\n\n" +
+		data.commit.message +
+		"\n------------------ Commit Notes --------------------------------\n";
 }
 module.exports = new gdrive();
