@@ -10,6 +10,7 @@
 zsconfig.js
 client_secret.json
 .credentials/
+github/
 
 #HTACCESS
 .htaccess
