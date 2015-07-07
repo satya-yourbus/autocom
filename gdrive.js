@@ -4,7 +4,6 @@ var format = require('tinytim').tim
 var google = require('googleapis');
 var config = require('./zsconfig');
 var googleAuth = require('google-auth-library');
-var prependFile = require('prepend-file');
 var request = require('request');
 var SCOPES = ['https://www.googleapis.com/auth/drive.file'];
 var TOKEN_DIR = '.credentials/';
@@ -86,7 +85,7 @@ function updateCommentInReleaseNotes(auth, data, fileId) {
 	var service = google.drive('v2');
 	// archive the release notes only if they are comming from master
 	if (data.branch != 'master') {
-		continue;
+		return;
 	}
 	fs.appendFile(CACHE_PATH, getMessage(data), function(err) {
 		if (err) {
