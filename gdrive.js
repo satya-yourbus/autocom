@@ -178,15 +178,16 @@ function getIssuesFromCommit(data) {
 	if (cards) {
 		return cards.join(', ').replace(/[Zz][Ss]-/g, 'https://' + config.jira.url + '/browse/ZS-');
 	}
+	return '';
 }
 
 function getMessage(data) {
-	return "\n------------------ Commit Notes --------------------------------\n\n" +
+	return "\n------------------ Release Notes --------------------------------\n\n" +
 		format("Author: {{commit.author.name}}\n", data) +
 		format("Date: {{commit.author.date}}\n", data) +
 		"Jira Cards: " + getIssuesFromCommit(data.commit.message) +
 		"\nCommit Notes:\n\n" +
 		data.commit.message +
-		"\n------------------ Commit Notes --------------------------------\n";
+		"\n-------------------------------------------------------------------\n";
 }
 module.exports = new gdrive();

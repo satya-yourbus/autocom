@@ -19,6 +19,11 @@ slackMod.prototype.init = function(emitter) {
 };
 
 function getMessage(data) {
-	return format("```{{commit.message}}```", data);
+	if (data.branch == 'stage') {
+		return format("<!channel> Code has been pushed to stage by {{commit.author.name}}. Full commit message below: ```{{commit.message}}```", data);
+	} else if (data.branch == 'master') {
+		return format("<!channel> Code has been pushed to master by {{commit.author.name}}. It will go live anytime soon. Full commit message below: ```{{commit.message}}```", data);
+	}
+	return data.commit.message;
 }
 module.exports = new slackMod();
