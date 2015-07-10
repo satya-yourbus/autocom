@@ -7,8 +7,8 @@ slackMod.prototype.init = function(emitter) {
 	emitter.on('add', function(data) {
 		slack.api('chat.postMessage', {
 			text: getMessage(data),
-			channel: '#prod-release',
-			username: 'autocomm'
+			channel: data.branch == 'stage' ? '#stage-release' : '#prod-release',
+			username: 'autocom'
 		}, function(err, response) {
 			if (err) {
 				console.log(err);

@@ -3,6 +3,7 @@ var readline = require('readline');
 var format = require('tinytim').tim
 var google = require('googleapis');
 var config = require('./zsconfig');
+var moment = require('moment');
 var googleAuth = require('google-auth-library');
 var request = require('request');
 var SCOPES = ['https://www.googleapis.com/auth/drive.file'];
@@ -185,9 +186,9 @@ function getIssuesFromCommit(data) {
 }
 
 function getMessage(data) {
-	return "\n------------------ Release Notes --------------------------------\n\n" +
+
+	return "\n------------------ " + moment(data.commit.author.date).utcOffset('+0530').format('DD-MM-YYYY h:mm a') + " --------------------------------\n\n" +
 		format("Author: {{commit.author.name}}\n", data) +
-		format("Date: {{commit.author.date}}\n", data) +
 		"Jira Cards: " + getIssuesFromCommit(data.commit.message) +
 		"\nCommit Notes:\n\n" +
 		data.commit.message +
