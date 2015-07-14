@@ -16,7 +16,9 @@
     "tinytim": "~0.1.1",
     "moment": "~2.10.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jenkins-api": "~0.2.8"
+  },
   "author": "Ravi Madabhushi, ZapStitch",
   "license": "MIT"
 }
